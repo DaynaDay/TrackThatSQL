@@ -10,16 +10,16 @@ CREATE TABLE department (
 );
 
 INSERT INTO department (id,name)
-VALUES ("Cosmetics");
+VALUES (280,"Cosmetics");
 
 INSERT INTO department (id, name)
-VALUES ("Building Services");
+VALUES (911,"Building Services");
 
 INSERT INTO department (id, name)
-VALUES ("Young Contemporary");
+VALUES (567,"Young Contemporary");
 
 INSERT INTO department (id, name)
-VALUES ("Childrens");
+VALUES (609,"Childrens");
 -- //////////////////////////////////////////////
 
 CREATE TABLE roles (
@@ -30,16 +30,16 @@ department_id INT
 );
 
 INSERT INTO roles (title, salary, department_id)
-VALUES ("Make Up Artist", 340000,"Cosmetics" );
+VALUES ("Make Up Artist", 340000, 280);
 
 INSERT INTO roles (title, salary, department_id)
-VALUES ("Personal Stylist", 340000,"Young Contemporary" );
+VALUES ("Personal Stylist", 340000, 567);
 
 INSERT INTO roles (title, salary, department_id)
-VALUES ("Con Artist", 340000,"Childrens" );
+VALUES ("Con Artist", 340000, 609);
 
 INSERT INTO roles (title, salary, department_id)
-VALUES ("Cable Guy", 340000,"Building Services" );
+VALUES ("Cable Guy", 340000, 911);
 
 
 -- //////////////////////////////////////////
