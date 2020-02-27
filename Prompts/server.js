@@ -58,9 +58,10 @@ choices:["Department", "Role","Employees"]
         connection.end();
     };
 
-}
+},
 
-function update(){
+
+function update() {
   inquirer
     .prompt ({
 name: "update",
@@ -68,6 +69,21 @@ message:"Which would you like to update?",
 type:"list",
 choices:["Department", "Role","Employees"]
     })
+
+    .then(function(updateResponse) {
+      // based on their answer, either call the bid or the post functions
+      if (updateResponse === "Department") {
+        newDepartment();
+      }
+      else if(addResponse === "role") {
+        newRole();
+      } 
+      else if (addResponse === "employees") {
+        newEmployee();
+      }
+      else {
+        connection.end();
+    };
     
 }
 
