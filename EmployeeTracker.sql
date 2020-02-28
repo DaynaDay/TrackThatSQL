@@ -4,6 +4,11 @@ CREATE DATABASE workerBee_db;
 
 USE workerBee_db;
 
+DROP DATABASE IF EXISTS workerBee_db;
+CREATE DATABASE workerBee_db;
+
+USE workerBee_db;
+
 CREATE TABLE department (
  id INT PRIMARY KEY,
  name VARCHAR(30)
@@ -20,7 +25,8 @@ VALUES (567,"Young Contemporary");
 
 INSERT INTO department (id, name)
 VALUES (609,"Childrens");
--- //////////////////////////////////////////////
+
+
 
 CREATE TABLE roles (
 id INT PRIMARY KEY,
@@ -29,20 +35,19 @@ salary DECIMAL,
 department_id INT 
 );
 
-INSERT INTO roles (title, salary, department_id)
-VALUES ("Make Up Artist", 340000, 280);
+INSERT INTO roles (id,title, salary, department_id)
+VALUES (1,"Make Up Artist", 34000, 280);
 
-INSERT INTO roles (title, salary, department_id)
-VALUES ("Personal Stylist", 340000, 567);
+INSERT INTO roles (id,title, salary, department_id)
+VALUES (2,"Personal Stylist", 50000, 567);
 
-INSERT INTO roles (title, salary, department_id)
-VALUES ("Con Artist", 340000, 609);
+INSERT INTO roles (id,title, salary, department_id)
+VALUES (3,"Con Artist", 70000, 609);
 
-INSERT INTO roles (title, salary, department_id)
-VALUES ("Cable Guy", 340000, 911);
+INSERT INTO roles (id,title, salary, department_id)
+VALUES (4,"Cable Guy", 40000, 911);
 
 
--- //////////////////////////////////////////
 
 CREATE TABLE employee (
 
@@ -53,16 +58,16 @@ CREATE TABLE employee (
   manager_id INT NULL
 );
 
-INSERT INTO department (first_name, last_name, role_id, manager_id)
-VALUES ("Dean", "Winchester", );
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (17,"Dean", "Winchester",11, NULL);
 
-INSERT INTO department (nameFull)
-VALUES ("Klaus", "Hargrove");
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (25,"Klaus", "Hargrove", 69, 4);
 
-INSERT INTO department (nameFull)
-VALUES ("Mary Sue", "Trope");
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (56, "Mary Sue", "Trope", 1, 29);
 
-INSERT INTO department (nameFull)
-VALUES ("Larry", "the Cable Guy");
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES (11,"Larry", "the Cable Guy", 89, NULL);
 
   
