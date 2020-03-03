@@ -1,1 +1,3 @@
 # TrackThatSQL
+
+In this application the user will be prompted to answer questions in relation to table data dealing with a, for the purpose of this project, department store. There are three tables with information dealing with a department and its identification number, roles within that department, and a table with employee information. When first answering the questions, the user will be prompted to pick which table information they would like to access to either view, add, or update the information within the selected.  

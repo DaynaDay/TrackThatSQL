@@ -16,7 +16,7 @@ const retrieveData = () => {
   });
 };
 // add
-const addItem = itemDataObj => {
+const addData = itemDataObj => {
   return new Promise((resolve, reject) => {
     const postQuery = connection.query('INSERT INTO department SET ?', itemDataObj, (err, addItemRes) => {
       if (err) {
@@ -30,11 +30,11 @@ const addItem = itemDataObj => {
   });
 };
 
-const updateBid = (itemId, bidPrice) => {
+const updateData = (itemId, bidPrice) => {
   return new Promise((resolve, reject) => {
     // run query to "UPDATE items SET highest_bid = <new high bid> WHERE id = <item's id>"
     const updateQuery = connection.query(
-      'UPDATE items SET ? WHERE ?',
+      'UPDATE department SET ? WHERE ?',
       [{ highest_bid: bidPrice }, { id: itemId }],
       (err, updateRes) => {
         if (err) {
