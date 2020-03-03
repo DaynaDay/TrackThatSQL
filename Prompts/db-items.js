@@ -26,26 +26,6 @@ const addData = itemDataObj => {
       }
       resolve({ message: 'Added!' });
     });
-    consola.info(postQuery.sql);
   });
 };
 
-const updateData = (itemId, bidPrice) => {
-  return new Promise((resolve, reject) => {
-    // run query to "UPDATE items SET highest_bid = <new high bid> WHERE id = <item's id>"
-    const updateQuery = connection.query(
-      'UPDATE department SET ? WHERE ?',
-      [{ highest_bid: bidPrice }, { id: itemId }],
-      (err, updateRes) => {
-        if (err) {
-          consola.error(err);
-          reject(err);
-          return;
-        }
-        resolve({ message: 'Bid successfully updated!' });
-      }
-    );
-
-    consola.info(updateQuery.sql);
-  });
-};
